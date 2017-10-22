@@ -1216,120 +1216,120 @@ LOAD /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none
  .note.gnu.build-id
                 0x0000000000000084       0x24 linker stubs
 
-.text           0x00000000000000a8      0x2db
+.text           0x00000000000000a8      0x2cd
  *(.text)
  .text          0x00000000000000a8       0x14 /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
  *(.text.*)
  .text.prv_window_unload
                 0x00000000000000bc       0x10 src/c/t2.c.33.o
  .text.prv_down_click_handler
-                0x00000000000000cc       0x2c src/c/t2.c.33.o
+                0x00000000000000cc       0x18 src/c/t2.c.33.o
  .text.prv_up_click_handler
-                0x00000000000000f8       0x2c src/c/t2.c.33.o
+                0x00000000000000e4       0x2c src/c/t2.c.33.o
  .text.prv_select_click_handler
-                0x0000000000000124       0x18 src/c/t2.c.33.o
+                0x0000000000000110       0x18 src/c/t2.c.33.o
  .text.prv_window_load
-                0x000000000000013c       0x68 src/c/t2.c.33.o
+                0x0000000000000128       0x68 src/c/t2.c.33.o
  .text.prv_click_config_provider
-                0x00000000000001a4       0x30 src/c/t2.c.33.o
+                0x0000000000000190       0x30 src/c/t2.c.33.o
  .text.startup.main
-                0x00000000000001d4       0x80 src/c/t2.c.33.o
-                0x00000000000001d4                main
+                0x00000000000001c0       0x80 src/c/t2.c.33.o
+                0x00000000000001c0                main
  .text.app_event_loop
-                0x0000000000000254        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000254                app_event_loop
- .text.app_log  0x0000000000000260        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000260                app_log
+                0x0000000000000240        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000240                app_event_loop
+ .text.app_log  0x000000000000024c        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000024c                app_log
  .text.layer_add_child
-                0x000000000000026c        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000026c                layer_add_child
+                0x0000000000000258        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000258                layer_add_child
  .text.layer_get_bounds
-                0x0000000000000278        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000278                layer_get_bounds
- .text.memset   0x0000000000000284        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000284                memset
+                0x0000000000000264        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000264                layer_get_bounds
+ .text.memset   0x0000000000000270        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000270                memset
  .text.window_create
-                0x0000000000000290        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000290                window_create
+                0x000000000000027c        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x000000000000027c                window_create
  .text.window_destroy
-                0x000000000000029c        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x000000000000029c                window_destroy
+                0x0000000000000288        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000288                window_destroy
  .text.window_get_root_layer
-                0x00000000000002a8        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000002a8                window_get_root_layer
+                0x0000000000000294        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000294                window_get_root_layer
  .text.window_set_click_config_provider
-                0x00000000000002b4        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000002b4                window_set_click_config_provider
+                0x00000000000002a0        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000002a0                window_set_click_config_provider
  .text.window_set_window_handlers
-                0x00000000000002c0        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000002c0                window_set_window_handlers
+                0x00000000000002ac        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000002ac                window_set_window_handlers
  .text.window_stack_push
-                0x00000000000002cc        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000002cc                window_stack_push
+                0x00000000000002b8        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000002b8                window_stack_push
  .text.window_single_click_subscribe
-                0x00000000000002d8        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000002d8                window_single_click_subscribe
+                0x00000000000002c4        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000002c4                window_single_click_subscribe
  .text.text_layer_create
-                0x00000000000002e4        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000002e4                text_layer_create
+                0x00000000000002d0        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000002d0                text_layer_create
  .text.text_layer_destroy
-                0x00000000000002f0        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000002f0                text_layer_destroy
+                0x00000000000002dc        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000002dc                text_layer_destroy
  .text.text_layer_get_layer
-                0x00000000000002fc        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x00000000000002fc                text_layer_get_layer
+                0x00000000000002e8        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000002e8                text_layer_get_layer
  .text.text_layer_set_text
-                0x0000000000000308        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000308                text_layer_set_text
+                0x00000000000002f4        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x00000000000002f4                text_layer_set_text
  .text.text_layer_set_text_alignment
-                0x0000000000000314        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
-                0x0000000000000314                text_layer_set_text_alignment
+                0x0000000000000300        0xc /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+                0x0000000000000300                text_layer_set_text_alignment
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x0000000000000320       0x63 src/c/t2.c.33.o
+                0x000000000000030c       0x69 src/c/t2.c.33.o
 
-.glue_7         0x0000000000000384        0x0
+.glue_7         0x0000000000000378        0x0
  .glue_7        0x0000000000000000        0x0 linker stubs
 
-.glue_7t        0x0000000000000384        0x0
+.glue_7t        0x0000000000000378        0x0
  .glue_7t       0x0000000000000000        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000000384        0x0
+.vfp11_veneer   0x0000000000000378        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000000000384        0x0
+.v4_bx          0x0000000000000378        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000000000384        0x0
+.iplt           0x0000000000000378        0x0
  .iplt          0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.rel.dyn        0x0000000000000384        0x0
+.rel.dyn        0x0000000000000378        0x0
  .rel.iplt      0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.data           0x0000000000000384        0x4
+.data           0x0000000000000378        0x4
  *(.data)
- .data          0x0000000000000384        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
- .data          0x0000000000000384        0x4 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-                0x0000000000000384                __dso_handle
- .data          0x0000000000000388        0x0 src/c/t2.c.33.o
- .data          0x0000000000000388        0x0 aplite/appinfo.auto.c.33.o
- .data          0x0000000000000388        0x0 aplite/src/resource_ids.auto.c.33.o
- .data          0x0000000000000388        0x0 src/message_keys.auto.c.33.o
- .data          0x0000000000000388        0x0 /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
- .data          0x0000000000000388        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
- .data          0x0000000000000388        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+ .data          0x0000000000000378        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .data          0x0000000000000378        0x4 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                0x0000000000000378                __dso_handle
+ .data          0x000000000000037c        0x0 src/c/t2.c.33.o
+ .data          0x000000000000037c        0x0 aplite/appinfo.auto.c.33.o
+ .data          0x000000000000037c        0x0 aplite/src/resource_ids.auto.c.33.o
+ .data          0x000000000000037c        0x0 src/message_keys.auto.c.33.o
+ .data          0x000000000000037c        0x0 /Users/iguest/Library/Application Support/Pebble SDK/SDKs/current/sdk-core/pebble/aplite/lib/libpebble.a(tmp7jpKUopebble.o)
+ .data          0x000000000000037c        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .data          0x000000000000037c        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
  *(.data.*)
 
-.igot.plt       0x0000000000000388        0x0
+.igot.plt       0x000000000000037c        0x0
  .igot.plt      0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.bss            0x0000000000000388        0x8
+.bss            0x000000000000037c        0x8
  *(.bss)
  *(.bss.*)
  .bss.s_text_layer
-                0x0000000000000388        0x4 src/c/t2.c.33.o
- .bss.s_window  0x000000000000038c        0x4 src/c/t2.c.33.o
+                0x000000000000037c        0x4 src/c/t2.c.33.o
+ .bss.s_window  0x0000000000000380        0x4 src/c/t2.c.33.o
 
 DISCARD
  libc.a(*)
@@ -1368,11 +1368,11 @@ OUTPUT(/Users/iguest/t2/build/aplite/pebble-app.elf elf32-littlearm)
  .comment       0x0000000000000000       0x4f src/message_keys.auto.c.33.o
  .comment       0x0000000000000000       0x4f /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
 
-.debug_info     0x0000000000000000      0xbd6
- .debug_info    0x0000000000000000      0x7d7 src/c/t2.c.33.o
- .debug_info    0x00000000000007d7      0x31a aplite/appinfo.auto.c.33.o
- .debug_info    0x0000000000000af1       0x64 aplite/src/resource_ids.auto.c.33.o
- .debug_info    0x0000000000000b55       0x81 src/message_keys.auto.c.33.o
+.debug_info     0x0000000000000000      0xbcc
+ .debug_info    0x0000000000000000      0x7cd src/c/t2.c.33.o
+ .debug_info    0x00000000000007cd      0x31a aplite/appinfo.auto.c.33.o
+ .debug_info    0x0000000000000ae7       0x64 aplite/src/resource_ids.auto.c.33.o
+ .debug_info    0x0000000000000b4b       0x81 src/message_keys.auto.c.33.o
 
 .debug_abbrev   0x0000000000000000      0x346
  .debug_abbrev  0x0000000000000000      0x23e src/c/t2.c.33.o
@@ -1380,8 +1380,8 @@ OUTPUT(/Users/iguest/t2/build/aplite/pebble-app.elf elf32-littlearm)
  .debug_abbrev  0x00000000000002dc       0x26 aplite/src/resource_ids.auto.c.33.o
  .debug_abbrev  0x0000000000000302       0x44 src/message_keys.auto.c.33.o
 
-.debug_loc      0x0000000000000000      0x20a
- .debug_loc     0x0000000000000000      0x20a src/c/t2.c.33.o
+.debug_loc      0x0000000000000000      0x1ea
+ .debug_loc     0x0000000000000000      0x1ea src/c/t2.c.33.o
 
 .debug_aranges  0x0000000000000000       0x98
  .debug_aranges
@@ -1396,11 +1396,11 @@ OUTPUT(/Users/iguest/t2/build/aplite/pebble-app.elf elf32-littlearm)
 .debug_ranges   0x0000000000000000       0x40
  .debug_ranges  0x0000000000000000       0x40 src/c/t2.c.33.o
 
-.debug_line     0x0000000000000000      0x3ce
- .debug_line    0x0000000000000000      0x1bf src/c/t2.c.33.o
- .debug_line    0x00000000000001bf      0x135 aplite/appinfo.auto.c.33.o
- .debug_line    0x00000000000002f4       0x1d aplite/src/resource_ids.auto.c.33.o
- .debug_line    0x0000000000000311       0xbd src/message_keys.auto.c.33.o
+.debug_line     0x0000000000000000      0x3cd
+ .debug_line    0x0000000000000000      0x1be src/c/t2.c.33.o
+ .debug_line    0x00000000000001be      0x135 aplite/appinfo.auto.c.33.o
+ .debug_line    0x00000000000002f3       0x1d aplite/src/resource_ids.auto.c.33.o
+ .debug_line    0x0000000000000310       0xbd src/message_keys.auto.c.33.o
 
 .debug_str      0x0000000000000000      0x6db
  .debug_str     0x0000000000000000      0x44a src/c/t2.c.33.o
@@ -1412,5 +1412,5 @@ OUTPUT(/Users/iguest/t2/build/aplite/pebble-app.elf elf32-littlearm)
  .debug_str     0x00000000000006b1       0x2a src/message_keys.auto.c.33.o
                                          0xda (size before relaxing)
 
-.debug_frame    0x0000000000000000       0xb4
- .debug_frame   0x0000000000000000       0xb4 src/c/t2.c.33.o
+.debug_frame    0x0000000000000000       0xac
+ .debug_frame   0x0000000000000000       0xac src/c/t2.c.33.o
