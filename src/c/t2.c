@@ -2,7 +2,6 @@
 
 static Window *s_window;
 static TextLayer *s_text_layer;
-static bool s_js_ready = true;
 
 static void prv_select_click_handler(ClickRecognizerRef recognizer, void *context) {
   text_layer_set_text(s_text_layer, "Select (up for ya, down for nah)");
@@ -22,7 +21,9 @@ DictionaryIterator *out_iter;
   // Prepare the outbox buffer for this message
   AppMessageResult result = app_message_outbox_begin(&out_iter);
   if(result == APP_MSG_OK) {
-    dict_write_int(out_iter, MESSAGE_KEY_RequestData, &value, "YAY", true);
+    int value = 3;
+    int MESSAGE_KEY_RequestData = 1;
+    dict_write_int(out_iter, MESSAGE_KEY_RequestData, &value, 3, true);
 
     // Send this message
     result = app_message_outbox_send();
