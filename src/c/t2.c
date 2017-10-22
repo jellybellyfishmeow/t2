@@ -1,47 +1,86 @@
 #include <pebble.h>
+#include <pebble.h>
+
+#define KEY_BUTTON    0
+#define KEY_VIBRATE   1
+
+#define BUTTON_UP     0
+#define BUTTON_SELECT 1
+#define BUTTON_DOWN   2
 
 static Window *s_window;
 static TextLayer *s_text_layer;
+/******************************* AppMessage ***********************************/
 
-static void prv_select_click_handler(ClickRecognizerRef recognizer, void *context) {
-  text_layer_set_text(s_text_layer, "Select (up for ya, down for nah)");
+static void send(int key, int message) {
+  DictionaryIterator *iter;
+  app_message_outbox_begin(&iter);
+
+  dict_write_int(iter, key, &message, sizeof(int), true);
+
+  app_message_outbox_send();
 }
 
-static void prv_up_click_handler(ClickRecognizerRef recognizer, void *context) {
-  text_layer_set_text(s_text_layer, "good 2 kno bruh");
-  text_layer_set_text(s_text_layer, "rip");
+static void inbox_received_handler(DictionaryIterator *iterator, void *context) {
+  // Get the first pair
+  Tuple *t = dict_read_first(iterator);
 
-}
-
-static void prv_down_click_handler(ClickRecognizerRef recognizer, void *context) {
-  text_layer_set_text(s_text_layer, "rip");
-  // Declare the dictionary's iterator
-DictionaryIterator *out_iter;
-
-  // Prepare the outbox buffer for this message
-  AppMessageResult result = app_message_outbox_begin(&out_iter);
-  if(result == APP_MSG_OK) {
-    int value = 3;
-    int MESSAGE_KEY_RequestData = 1;
-    dict_write_int(out_iter, MESSAGE_KEY_RequestData, &value, 3, true);
-
-    // Send this message
-    result = app_message_outbox_send();
-    if(result != APP_MSG_OK) {
-      APP_LOG(APP_LOG_LEVEL_ERROR, "Error sending the outbox: %d", (int)result);
+  // Process all pairs present
+  while(t != NULL) {
+    // Process this pair's key
+    switch(t->key) {
+      case KEY_VIBRATE:
+        // Trigger vibration
+        text_layer_set_text(s_text_layer, "Vibrate!");
+        vibes_short_pulse();
+        break;
+      default:
+        APP_LOG(APP_LOG_LEVEL_INFO, "Unknown key: %d", (int)t->key);
+        break;
     }
-  } else {
-    // The outbox cannot be used right now
-    APP_LOG(APP_LOG_LEVEL_ERROR, "Error preparing the outbox: %d", (int)result);
+
+    // Get next pair, if any
+    t = dict_read_next(iterator);
   }
-
-
 }
 
-static void prv_click_config_provider(void *context) {
-  window_single_click_subscribe(BUTTON_ID_SELECT, prv_select_click_handler);
-  window_single_click_subscribe(BUTTON_ID_UP, prv_up_click_handler);
-  window_single_click_subscribe(BUTTON_ID_DOWN, prv_down_click_handler);
+static void inbox_dropped_handler(AppMessageResult reason, void *context) {
+  APP_LOG(APP_LOG_LEVEL_ERROR, "Message dropped!");
+}
+
+static void outbox_failed_handler(DictionaryIterator *iterator, AppMessageResult reason, void *context) {
+  APP_LOG(APP_LOG_LEVEL_ERROR, "Outbox send failed!");
+}
+
+static void outbox_sent_handler(DictionaryIterator *iterator, void *context) {
+  APP_LOG(APP_LOG_LEVEL_INFO, "Outbox send success!");
+}
+
+/********************************* Buttons ************************************/
+
+static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
+  text_layer_set_text(s_text_layer, "Select (up for ya, down for nah)");
+
+  send(KEY_BUTTON, BUTTON_SELECT);
+}
+
+static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
+  text_layer_set_text(s_text_layer, "good 2 kno bruh");
+
+  send(KEY_BUTTON, BUTTON_UP);
+}
+
+static void down_click_handler(ClickRecognizerRef recognizer, void *context) {
+  text_layer_set_text(s_text_layer, "rip");
+
+  send(KEY_BUTTON, BUTTON_DOWN);
+}
+
+static void click_config_provider(void *context) {
+  // Assign button handlers
+  window_single_click_subscribe(BUTTON_ID_SELECT, select_click_handler);
+  window_single_click_subscribe(BUTTON_ID_UP, up_click_handler);
+  window_single_click_subscribe(BUTTON_ID_DOWN, down_click_handler);
 }
 
 static void prv_window_load(Window *window) {
@@ -60,7 +99,7 @@ static void prv_window_unload(Window *window) {
 
 static void prv_init(void) {
   s_window = window_create();
-  window_set_click_config_provider(s_window, prv_click_config_provider);
+  window_set_click_config_provider(s_window, click_config_provider);
   window_set_window_handlers(s_window, (WindowHandlers) {
     .load = prv_window_load,
     .unload = prv_window_unload,
